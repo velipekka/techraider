@@ -1,0 +1,661 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: use
+  serializedVersion: 4
+  m_AnimationType: 2
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -.319000006, y: 0, z: 0}
+        inSlope: {x: 2.22000003, y: 0, z: 0}
+        outSlope: {x: 2.22000003, y: 0, z: 0}
+        tangentMode: 0
+      - time: .0166666675
+        value: {x: -.282000005, y: 0, z: 0}
+        inSlope: {x: 1.04062498, y: 0, z: 0}
+        outSlope: {x: 1.04062498, y: 0, z: 0}
+        tangentMode: 0
+      - time: .283333331
+        value: {x: -.319000006, y: 0, z: 0}
+        inSlope: {x: -.0693750083, y: 0, z: 0}
+        outSlope: {x: -.0693750083, y: 0, z: 0}
+        tangentMode: 0
+      - time: .366666675
+        value: {x: -.319000006, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 51
+      - time: .366833329
+        value: {x: -.319000006, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 3
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: laser_base/laser_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -.0949999988, y: 0, z: 0}
+        inSlope: {x: 1.61999965, y: 0, z: 0}
+        outSlope: {x: 1.61999965, y: 0, z: 0}
+        tangentMode: 0
+      - time: .0166666675
+        value: {x: -.0680000037, y: 0, z: 0}
+        inSlope: {x: .759374857, y: 0, z: 0}
+        outSlope: {x: .759374857, y: 0, z: 0}
+        tangentMode: 0
+      - time: .283333331
+        value: {x: -.0949999988, y: 0, z: 0}
+        inSlope: {x: -.0506249927, y: 0, z: 0}
+        outSlope: {x: -.0506249927, y: 0, z: 0}
+        tangentMode: 0
+      - time: .366666675
+        value: {x: -.0949999988, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: .366833329
+        value: {x: -.0949999988, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: laser_base/laser_1/laser_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -.0890000165, y: 0, z: 0}
+        inSlope: {x: 3.42000079, y: 0, z: 0}
+        outSlope: {x: 3.42000079, y: 0, z: 0}
+        tangentMode: 0
+      - time: .0166666675
+        value: {x: -.0320000015, y: 0, z: 0}
+        inSlope: {x: 1.60312533, y: 0, z: 0}
+        outSlope: {x: 1.60312533, y: 0, z: 0}
+        tangentMode: 0
+      - time: .283333331
+        value: {x: -.0890000165, y: 0, z: 0}
+        inSlope: {x: -.106875032, y: 0, z: 0}
+        outSlope: {x: -.106875032, y: 0, z: 0}
+        tangentMode: 0
+      - time: .366666675
+        value: {x: -.0890000165, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 4
+      - time: .366833329
+        value: {x: -.0890000165, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: laser_base/laser_1/laser_2/laser_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0}
+        inSlope: {x: .313333303, y: 0, z: 0}
+        outSlope: {x: .313333303, y: 0, z: 0}
+        tangentMode: 98594852
+      - time: .150000006
+        value: {x: .0469999984, y: 0, z: 0}
+        inSlope: {x: .0482051149, y: 0, z: 0}
+        outSlope: {x: .0482051149, y: 0, z: 0}
+        tangentMode: 28009
+      - time: .366666675
+        value: {x: 0, y: 0, z: 0}
+        inSlope: {x: -.216923073, y: 0, z: 0}
+        outSlope: {x: -.216923073, y: 0, z: 0}
+        tangentMode: 4456498
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: laser_base
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: -.754945219, y: 0, z: 0}
+        outSlope: {x: -.754945219, y: 0, z: 0}
+        tangentMode: 98594852
+      - time: .150000006
+        value: {x: .886758208, y: 1, z: 1}
+        inSlope: {x: -.116145402, y: 0, z: 0}
+        outSlope: {x: -.116145402, y: 0, z: 0}
+        tangentMode: 1090547049
+      - time: .366666675
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: .522654414, y: 0, z: 0}
+        outSlope: {x: .522654414, y: 0, z: 0}
+        tangentMode: 104508236
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: laser_base
+  m_FloatCurves: []
+  m_PPtrCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 3000311887
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3442826179
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1024398221
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2235644403
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2235644403
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_StartTime: 0
+    m_StopTime: .366833329
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.319000006
+        inSlope: 2.22000003
+        outSlope: 2.22000003
+        tangentMode: 10
+      - time: .0166666675
+        value: -.282000005
+        inSlope: 1.04062498
+        outSlope: 1.04062498
+        tangentMode: 10
+      - time: .283333331
+        value: -.319000006
+        inSlope: -.0693750083
+        outSlope: -.0693750083
+        tangentMode: 10
+      - time: .366666675
+        value: -.319000006
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366833329
+        value: -.319000006
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: laser_base/laser_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .283333331
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366833329
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: laser_base/laser_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .283333331
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366833329
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: laser_base/laser_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.0949999988
+        inSlope: 1.61999965
+        outSlope: 1.61999965
+        tangentMode: 10
+      - time: .0166666675
+        value: -.0680000037
+        inSlope: .759374857
+        outSlope: .759374857
+        tangentMode: 10
+      - time: .283333331
+        value: -.0949999988
+        inSlope: -.0506249927
+        outSlope: -.0506249927
+        tangentMode: 10
+      - time: .366666675
+        value: -.0949999988
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366833329
+        value: -.0949999988
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: laser_base/laser_1/laser_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .283333331
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366833329
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: laser_base/laser_1/laser_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .283333331
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366833329
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: laser_base/laser_1/laser_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.0890000165
+        inSlope: 3.42000079
+        outSlope: 3.42000079
+        tangentMode: 10
+      - time: .0166666675
+        value: -.0320000015
+        inSlope: 1.60312533
+        outSlope: 1.60312533
+        tangentMode: 10
+      - time: .283333331
+        value: -.0890000165
+        inSlope: -.106875032
+        outSlope: -.106875032
+        tangentMode: 10
+      - time: .366666675
+        value: -.0890000165
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366833329
+        value: -.0890000165
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: laser_base/laser_1/laser_2/laser_3
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .283333331
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366833329
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: laser_base/laser_1/laser_2/laser_3
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0166666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .283333331
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366833329
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: laser_base/laser_1/laser_2/laser_3
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: .313333303
+        outSlope: .313333303
+        tangentMode: 10
+      - time: .150000006
+        value: .0469999984
+        inSlope: .0482051149
+        outSlope: .0482051149
+        tangentMode: 10
+      - time: .366666675
+        value: 0
+        inSlope: -.216923073
+        outSlope: -.216923073
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: laser_base
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .150000006
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: laser_base
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .150000006
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366666675
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: laser_base
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: -.754945219
+        outSlope: -.754945219
+        tangentMode: 10
+      - time: .150000006
+        value: .886758208
+        inSlope: -.116145402
+        outSlope: -.116145402
+        tangentMode: 10
+      - time: .366666675
+        value: 1
+        inSlope: .522654414
+        outSlope: .522654414
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalScale.x
+    path: laser_base
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .150000006
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366666675
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalScale.y
+    path: laser_base
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .150000006
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .366666675
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalScale.z
+    path: laser_base
+    classID: 4
+    script: {fileID: 0}
+  m_EulerEditorCurves: []
+  m_Events: []
