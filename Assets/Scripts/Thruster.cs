@@ -4,8 +4,6 @@ using System.Collections;
 
 public class Thruster : MonoBehaviour
 {
-	static int sInputIndex = 0;
-
 	int thrustIndex;
 	int rotateLeftIndex;
 	int rotateRightIndex;
@@ -16,9 +14,9 @@ public class Thruster : MonoBehaviour
 
 	void Start()
 	{
-		thrustIndex = sInputIndex++;
-		rotateLeftIndex = sInputIndex++;
-		rotateRightIndex = sInputIndex++;
+		thrustIndex = RaiderInput.GetRandomIndex ();
+		rotateLeftIndex = RaiderInput.GetRandomIndex ();
+		rotateRightIndex = RaiderInput.GetRandomIndex ();
 
 		EventManager.Initialize (this);
 	}

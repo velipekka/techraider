@@ -9,6 +9,32 @@ using XInputDotNetPure;
 
 public class RaiderInput : MonoBehaviour
 {
+	static int sInputIndex = -1;
+	static int[] sShuffledIndexes;
+
+	public static int GetRandomIndex()
+	{
+		if (sShuffledIndexes == null)
+		{
+			sShuffledIndexes = new[] {0, 1, 2 };
+			ShipGenerator.Shuffle (sShuffledIndexes);
+		}
+		sInputIndex++;
+		return sShuffledIndexes[Mathf.Clamp(sInputIndex, 0, sShuffledIndexes.Length - 1)];
+	}
+
+	public class InputSource
+	{
+		public int controlIndex;
+		public int keyIndex;
+		
+		public InputSource(int c, int k)
+		{
+			controlIndex = c;
+			keyIndex = k;
+		}
+	}
+
 	public const int k_ControllerCount = 4;
 	public const int k_KeysPerController = 10;
 	public const float k_WheelEpsilon = 0.1f;

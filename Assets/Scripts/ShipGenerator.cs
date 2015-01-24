@@ -184,7 +184,7 @@ public class ShipGenerator : MonoBehaviour
 		return target;
 	}
 
-	static void Shuffle<T>(T[] array)
+	public static void Shuffle<T>(T[] array)
 	{
 		int n = array.Length;
 		for (int i = 0; i < n; i++)
