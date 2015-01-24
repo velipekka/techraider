@@ -347,6 +347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserParticle: {fileID: 19845016}
+  laserBeamPrefab: {fileID: 179578, guid: 900772625e1289e4cae83110f2bdeaa5, type: 2}
+  laserForce: 10
 --- !u!114 &11445020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1387,7 +1389,7 @@ ParticleSystem:
       m_Bits: 4294967295
     quality: 0
     voxelSize: .5
-    collisionMessages: 0
+    collisionMessages: 1
   SubModule:
     enabled: 1
     subEmitterBirth: {fileID: 19845018}
@@ -3584,7 +3586,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 655114445
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 04b9d7263e5d06144b9d34511ee76193, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

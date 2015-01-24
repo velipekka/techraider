@@ -15,6 +15,8 @@ public class Laser : MonoBehaviour
 	bool isCharging;
 
 	public ParticleSystem laserParticle;
+	public GameObject laserBeamPrefab;
+	public float laserForce;
 
 	void Start()
 	{
@@ -72,10 +74,10 @@ public class Laser : MonoBehaviour
 
 		// Rotate
 		if (rotateLeft)
-			child.Rotate (Vector3.forward, -1);
+			child.Rotate (Vector3.forward, -3);
 
 		if (rotateRight)
-			child.Rotate (Vector3.forward, 1);
+			child.Rotate (Vector3.forward, 3);
 
 		// Charge
 		if (shoot)
@@ -87,7 +89,9 @@ public class Laser : MonoBehaviour
 		if (isCharging && !shoot)
 		{
 			isCharging = false;
+			Instantiate (laserBeamPrefab, transform.GetChild (0).position, transform.GetChild (0).rotation);
 			laserParticle.Emit(1);
+			rigidbody2D.AddForce (transform.GetChild(0).right * 5);
 		}
 	}
 }

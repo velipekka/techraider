@@ -58,7 +58,7 @@ public class Thruster : MonoBehaviour
 			if (animator)
 				animator.SetFloat ("power", 1);
 
-			rigidbody2D.AddForce(child.right*10);
+			rigidbody2D.AddForce(child.right*20);
 		}
 	}
 }
