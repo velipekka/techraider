@@ -91,7 +91,7 @@ public class ShipGenerator : MonoBehaviour
 
 		var joint = from.gameObject.AddComponent<SpringJoint2D> ();
 		joint.distance = 0;
-		joint.frequency = 3f;
+		joint.frequency = 1f;
 		joint.collideConnected = true;
 		joint.anchor = anchor;
 		joint.connectedAnchor = -anchor;
