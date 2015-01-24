@@ -16,7 +16,9 @@ public class RaiderInput : MonoBehaviour
 	{
 		if (sShuffledIndexes == null)
 		{
-			sShuffledIndexes = new[] {0, 1, 2 };
+			sShuffledIndexes = new int[20];
+			for (int i = 0; i < sShuffledIndexes.Length; i++)
+				sShuffledIndexes[i] = i;
 			ShipGenerator.Shuffle (sShuffledIndexes);
 		}
 		sInputIndex++;

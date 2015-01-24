@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e668e8667c2c0aa45b2331689309d6a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knobValues: []
+  prevValues: 
 --- !u!4 &206507528
 Transform:
   m_ObjectHideFlags: 0
@@ -273,7 +273,8 @@ MonoBehaviour:
   - {fileID: 106552, guid: 25cf1b20b7be5854d88bcba8023c4fdc, type: 2}
   itemPrefabs:
   - {fileID: 147530, guid: db7149597fa4f80409fa402bb19d1147, type: 2}
-  itemCount: 1
+  - {fileID: 155410, guid: faefeb2d2635d114db3bf81d87f7d6dc, type: 2}
+  itemCount: 3
 --- !u!4 &776340351
 Transform:
   m_ObjectHideFlags: 0
