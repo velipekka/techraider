@@ -11,8 +11,8 @@ public class PanicGenerator : MonoBehaviour {
     void Update()
     {
         renderTex.Release();
-        renderTex.width = panicMode == PanicMode.LowRes ? 64 : 512;
-        renderTex.height = panicMode == PanicMode.LowRes ? 64 : 512;
+        renderTex.width = panicMode == PanicMode.LowRes ? 64 : 512 ;
+        renderTex.height = panicMode == PanicMode.LowRes ? 64 :512;
 
     }
 
