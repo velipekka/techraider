@@ -33,11 +33,12 @@ public class ShipGenerator : MonoBehaviour
 
 	Slot[,] slotMap = new Slot[100,100];
 
-	public int itemCount = 10;
 	int usedSlotCount;
 
 	void Start()
 	{
+		Shuffle (itemPrefabs);
+
 		GenerateBaseHullSlots();
 		 
 		GenerateSlots ();
@@ -100,12 +101,13 @@ public class ShipGenerator : MonoBehaviour
 		joint.connectedBody = to.gameObject.rigidbody2D;
 	}
 
+	int itemNumber;
 	void GenerateParts()
 	{
 		foreach (var slot in slots)
 		{
 			var prefab = slot.item
-				? itemPrefabs[Random.Range(0, itemPrefabs.Length)]
+				? itemPrefabs[(itemNumber++) % itemPrefabs.Length]
 				: hullPrefabs[Random.Range(0, hullPrefabs.Length)];
 
 			slot.gameObject = Instantiate (prefab, slot.position, prefab.transform.rotation) as GameObject;
@@ -144,19 +146,19 @@ public class ShipGenerator : MonoBehaviour
 			int[] array = {1, 2, 3, 4};
 			Shuffle(array);
 
-			AddSlot (slot, Side.Left,	array[0] > 3);
-			AddSlot (slot, Side.Right,	array[1] > 3);
-			AddSlot (slot, Side.Top,	array[2] > 3);
-			AddSlot (slot, Side.Bottom, array[3] > 3);
+			AddSlot (slot, Side.Left,	array[0] > 1);
+			AddSlot (slot, Side.Right,	array[1] > 1);
+			AddSlot (slot, Side.Top,	array[2] > 1);
+			AddSlot (slot, Side.Bottom, array[3] > 1);
 		}
 
-		if (!done && usedSlotCount < itemCount)
+		if (!done && usedSlotCount < itemPrefabs.Length)
 			GenerateSlots ();
 	}
 
 	Slot AddSlot(Slot slot, Side side, bool item)
 	{
-		if (item && usedSlotCount >= itemCount)
+		if (item && usedSlotCount >= itemPrefabs.Length)
 			return null;
 
 		Vector2 direction =

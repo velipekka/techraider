@@ -74,5 +74,9 @@ public class WorldMachine : MonoBehaviour
 
     }
 
-	
+	void OnDrawGizmos()
+	{
+		Gizmos.DrawWireCube (propBounds.center, new Vector3 (propBounds.width, propBounds.height, 0));
+	}
+
 }
