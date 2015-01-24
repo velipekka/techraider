@@ -16,6 +16,7 @@ TextureImporter:
     21300022: ship_generic_3
     21300024: ship_generic_5
     21300026: ship_generic_4
+    21300028: tractor_beam
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -196,6 +197,16 @@ TextureImporter:
         height: 95
       alignment: 9
       pivot: {x: .613385677, y: .50529623}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tractor_beam
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 101
+        width: 29
+        height: 58
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
