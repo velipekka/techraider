@@ -28,6 +28,8 @@ public class Laser : MonoBehaviour
 	{
 		int index = (int)parameters[0];
 
+		Debug.Log(index);
+
 		if (shootIndex == index)
 			shoot = (bool)parameters[1];
 
@@ -36,6 +38,8 @@ public class Laser : MonoBehaviour
 
 		if (rotateRightIndex == index)
 			rotateRight = (bool)parameters[1];
+
+		Debug.Log(shoot + ":" + rotateLeft + ":" + rotateRight);
 	}
 
 	IEnumerator CoChargeLaser()
@@ -69,7 +73,14 @@ public class Laser : MonoBehaviour
 		if (rotateRight)
 			child.Rotate (Vector3.forward, 1);
 
-		// Thrust
+		// Charge
+		if (shoot)
+		{
+			StopAllCoroutines();
+			StartCoroutine(CoChargeLaser());
+		}
+
+		// Shoot
 		if (isCharging && !shoot)
 		{
 			isCharging = false;
