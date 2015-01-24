@@ -5,6 +5,8 @@ TextureImporter:
     21300000: asteroidz_0
     21300002: asteroidz_1
     21300004: asteroidz_2
+    21300006: asteroidz_debris_0
+    21300008: asteroidz_debris_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -73,6 +75,26 @@ TextureImporter:
         y: 251
         width: 70
         height: 58
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asteroidz_debris_0
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 465
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asteroidz_debris_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 464
+        width: 16
+        height: 13
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
