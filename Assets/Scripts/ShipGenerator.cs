@@ -11,7 +11,7 @@ public class ShipGenerator : MonoBehaviour
 	public GameObject[] itemPrefabs;
 
 	enum Side { Left, Right, Top, Bottom };
-	class Slot
+	public class Slot
 	{
 		public Slot(bool item, Vector2 position)
 		{
@@ -29,7 +29,7 @@ public class ShipGenerator : MonoBehaviour
 		public Slot top;
 		public Slot bottom;
 	}
-	List<Slot> slots = new List<Slot>();
+	public List<Slot> slots = new List<Slot>();
 
 	Slot[,] slotMap = new Slot[100,100];
 
