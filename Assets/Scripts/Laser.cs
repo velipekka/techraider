@@ -12,6 +12,8 @@ public class Laser : MonoBehaviour
 	float rotateLeft;
 	float rotateRight;
 
+	bool isCharging;
+
 	void Start()
 	{
 		shootIndex = RaiderInput.GetRandomIndex();
@@ -36,6 +38,26 @@ public class Laser : MonoBehaviour
 			rotateRight = (float)parameters[1];
 	}
 
+	IEnumerator CoChargeLaser()
+	{
+		var animator = GetComponentInChildren<Animator> ();
+		float charge = 0;
+
+		while (shoot > 0)
+		{
+			isCharging = true;
+
+			charge += Time.deltaTime / 2;
+			if (animator)
+				animator.SetFloat("charge", charge);
+
+			yield return null;
+		}
+
+		if (animator)
+			animator.SetFloat ("charge", 0);
+	}
+
 	void Update()
 	{
 		var child = transform.GetChild (0);
@@ -48,9 +70,9 @@ public class Laser : MonoBehaviour
 			child.Rotate (Vector3.forward, rotateRight);
 
 		// Thrust
-		if (shoot <= 0)
+		if (isCharging && shoot <= 0)
 		{
-			shoot = 1;
+			isCharging = false;
 
 			var animator = GetComponentInChildren<Animator> ();
 			if (animator)
