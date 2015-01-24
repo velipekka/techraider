@@ -23,18 +23,6 @@ public class RaiderInput : MonoBehaviour
 		return sShuffledIndexes[Mathf.Clamp(sInputIndex, 0, sShuffledIndexes.Length - 1)];
 	}
 
-	public class InputSource
-	{
-		public int controlIndex;
-		public int keyIndex;
-		
-		public InputSource(int c, int k)
-		{
-			controlIndex = c;
-			keyIndex = k;
-		}
-	}
-
 	public const int k_ControllerCount = 4;
 	public const int k_KeysPerController = 10;
 	public const float k_WheelEpsilon = 0.1f;
@@ -97,8 +85,8 @@ public class RaiderInput : MonoBehaviour
 			{
 				if (HasChanged(c, k))
 				{
-					prevValues[(c + 1)*(k + 1) - 1] = GetValue(c, k);
-					EventManager.Trigger("InputChanged", (c + 1)*(k + 1) - 1, GetValue(c, k));
+					prevValues[c * k_KeysPerController + k] = GetValue(c, k);
+					EventManager.Trigger("InputChanged", c * k_KeysPerController + k, GetValue(c, k));
 				}
 			}
 		}
@@ -106,7 +94,7 @@ public class RaiderInput : MonoBehaviour
 
 	public bool HasChanged(int controlIndex, int keyIndex)
 	{
-		return prevValues[(controlIndex + 1)*(keyIndex + 1) - 1] != GetValue(controlIndex, keyIndex);
+		return prevValues[controlIndex * k_KeysPerController + keyIndex] != GetValue(controlIndex, keyIndex);
 	}
 
 	public bool GetValue(int controlIndex, int keyIndex)
