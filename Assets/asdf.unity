@@ -270,10 +270,8 @@ MonoBehaviour:
   - {fileID: 128766, guid: 129c06fec20f2704b99ab60d6f66d35b, type: 2}
   - {fileID: 194238, guid: 7ccac0817e5545e4d956368719642b6a, type: 2}
   itemPrefabs:
-  - {fileID: 144620, guid: 2ba95ce985529f1438f66146651314f1, type: 2}
   - {fileID: 155410, guid: faefeb2d2635d114db3bf81d87f7d6dc, type: 2}
-  - {fileID: 147530, guid: db7149597fa4f80409fa402bb19d1147, type: 2}
-  itemCount: 14
+  itemCount: 1
 --- !u!4 &776340351
 Transform:
   m_ObjectHideFlags: 0
