@@ -272,7 +272,7 @@ MonoBehaviour:
   - {fileID: 193632, guid: 5b77e2afcb5fe6041a8a520ef17b7b14, type: 2}
   - {fileID: 106552, guid: 25cf1b20b7be5854d88bcba8023c4fdc, type: 2}
   itemPrefabs:
-  - {fileID: 155410, guid: faefeb2d2635d114db3bf81d87f7d6dc, type: 2}
+  - {fileID: 147530, guid: db7149597fa4f80409fa402bb19d1147, type: 2}
   itemCount: 1
 --- !u!4 &776340351
 Transform:

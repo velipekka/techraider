@@ -61,7 +61,7 @@ GameObject:
   - 4: {fileID: 447530}
   - 61: {fileID: 6147540}
   - 50: {fileID: 5047540}
-  - 114: {fileID: 11447540}
+  - 114: {fileID: 11418122}
   m_Layer: 0
   m_Name: laser
   m_TagString: Untagged
@@ -307,6 +307,17 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11418122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 678b8bca4c727ef419bedbf991ca869b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11445020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -319,17 +330,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chargeParticle: {fileID: 19845020}
---- !u!114 &11447540
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae7549a3dd8d23e409cc87ebfe9644ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!198 &19845016
 ParticleSystem:
   m_ObjectHideFlags: 1
