@@ -9,26 +9,17 @@ using XInputDotNetPure;
 
 public class RaiderInput : MonoBehaviour
 {
-	public class InputSource
-	{
-		public int controlIndex;
-		public int keyIndex;
-		
-		public InputSource(int c, int k)
-		{
-			controlIndex = c;
-			keyIndex = k;
-		}
-	}
-
 	public const int k_ControllerCount = 4;
-	public const int k_KeysPerController = 8;
-	public const float k_Epsilon = 0.01f;
+	public const int k_KeysPerController = 10;
+	public const float k_WheelEpsilon = 0.1f;
+	public const float k_KnobEpsilon = 0.02f;
+	public const float k_FaderEpsilon = 0.3f;
 	public const float k_WheelMultiplier = 1000f;
 
 	public GamePadState[] prevState;
 	public GamePadState[] currentState;
-	public float[] knobValues;
+	
+	public bool[] prevValues;
 
 	// Use this for initialization
 	void Start ()
@@ -36,7 +27,7 @@ public class RaiderInput : MonoBehaviour
 		EventManager.Initialize();
 		currentState = new GamePadState[4];
 		prevState = new GamePadState[4];
-		knobValues = new float[4];
+		prevValues = new bool[k_ControllerCount * k_KeysPerController];
 	}
 	
 	// Update is called once per frame
@@ -46,9 +37,6 @@ public class RaiderInput : MonoBehaviour
 		{
 			prevState[i] = currentState[i];
 			currentState[i] = GamePad.GetState((PlayerIndex)i, GamePadDeadZone.None);
-			float knobDelta = currentState[i].ThumbSticks.Right.X - prevState[i].ThumbSticks.Right.X;
-			if (Math.Abs(knobDelta) < 0.5f)
-				knobValues[i] = Mathf.Clamp (knobValues[i] + (currentState[i].ThumbSticks.Right.X - prevState[i].ThumbSticks.Right.X), -1f, 1f);
 		}
 
 		GameInputHandling();
@@ -61,10 +49,15 @@ public class RaiderInput : MonoBehaviour
 		{
 			for (int k = 0; k < k_KeysPerController; k++)
 			{
-				s += ((int)(GetValue(c, k)*10f)) != 0 ? "1" : "0";
+				s += GetValue(c, k) ? "1" : "0";
 			}
 		}
 		GUILayout.Label(s);
+
+		for (int i = 0; i < 4; i++)
+		{
+			GUILayout.Label(i + ": " + currentState[i].ThumbSticks.Right.X.ToString());
+		}
 	}
 
 	private void GameInputHandling()
@@ -76,62 +69,48 @@ public class RaiderInput : MonoBehaviour
 		{
 			for (int k = 0; k < k_KeysPerController; k++)
 			{
-				if (HasChanged(c,k))
-					EventManager.Trigger("InputChanged", (c+1)*(k+1)-1, GetValue(c, k));
+				if (HasChanged(c, k))
+				{
+					prevValues[(c + 1)*(k + 1) - 1] = GetValue(c, k);
+					EventManager.Trigger("InputChanged", (c + 1)*(k + 1) - 1, GetValue(c, k));
+				}
 			}
 		}
 	}
 
 	public bool HasChanged(int controlIndex, int keyIndex)
 	{
-		GamePadState current = currentState[controlIndex];
-		GamePadState prev = prevState[controlIndex];
-
-		switch (keyIndex)
-		{
-			case 0:
-				return current.Buttons.A != prev.Buttons.A;
-			case 1:
-				return current.Buttons.B != prev.Buttons.B;
-			case 2:
-				return current.Buttons.X != prev.Buttons.X;
-			case 3:
-				return current.Buttons.Y != prev.Buttons.Y;
-			case 4:
-				return Mathf.Abs((current.ThumbSticks.Left.X - prev.ThumbSticks.Left.X) * k_WheelMultiplier) > k_Epsilon;
-			case 5:
-				return Mathf.Abs((current.ThumbSticks.Left.Y - prev.ThumbSticks.Left.Y) * k_WheelMultiplier) > k_Epsilon;
-			case 6:
-				return Mathf.Abs(current.ThumbSticks.Right.X - prev.ThumbSticks.Right.X) > k_Epsilon;
-			case 7:
-				return Mathf.Abs(current.ThumbSticks.Right.Y - prev.ThumbSticks.Right.Y) > k_Epsilon;
-		}
-		return false;
+		return prevValues[(controlIndex + 1)*(keyIndex + 1) - 1] != GetValue(controlIndex, keyIndex);
 	}
 
-	public float GetValue(int controlIndex, int keyIndex)
+	public bool GetValue(int controlIndex, int keyIndex)
 	{
 		GamePadState current = currentState[controlIndex];
+		GamePadState prev = prevState[controlIndex];
 		
 		switch (keyIndex)
 		{
 			case 0:
-				return current.Buttons.A == ButtonState.Pressed ? 1f : 0f;
+				return current.Buttons.A == ButtonState.Pressed;
 			case 1:
-				return current.Buttons.B == ButtonState.Pressed ? 1f : 0f;
+				return current.Buttons.B == ButtonState.Pressed;
 			case 2:
-				return current.Buttons.X == ButtonState.Pressed ? 1f : 0f;
+				return current.Buttons.X == ButtonState.Pressed;
 			case 3:
-				return current.Buttons.Y == ButtonState.Pressed ? 1f : 0f;
+				return current.Buttons.Y == ButtonState.Pressed;
 			case 4:
-				return current.ThumbSticks.Left.X * k_WheelMultiplier;
+				return current.ThumbSticks.Left.X * k_WheelMultiplier > k_WheelEpsilon;
 			case 5:
-				return current.ThumbSticks.Left.Y * k_WheelMultiplier;
+				return current.ThumbSticks.Left.X * k_WheelMultiplier < -k_WheelEpsilon;
 			case 6:
-				return knobValues[controlIndex];
+				return (prev.ThumbSticks.Right.X - current.ThumbSticks.Right.X) > k_KnobEpsilon && Mathf.Abs(prev.ThumbSticks.Right.X - current.ThumbSticks.Right.X) < 0.5f;
 			case 7:
-				return Mathf.Abs(current.ThumbSticks.Right.Y) > 0.1f ? current.ThumbSticks.Right.Y : 0f;
+				return (prev.ThumbSticks.Right.X - current.ThumbSticks.Right.X) < -k_KnobEpsilon && Mathf.Abs(prev.ThumbSticks.Right.X - current.ThumbSticks.Right.X) < 0.5f;
+			case 8:
+				return current.ThumbSticks.Right.Y > k_FaderEpsilon;
+			case 9:
+				return current.ThumbSticks.Right.Y < -k_FaderEpsilon;
 		}
-		return 0f;
+		return false;
 	}
 }

@@ -1,4 +1,4 @@
-﻿using RageEvent;
+using RageEvent;
 using UnityEngine;
 using System.Collections;
 
@@ -10,9 +10,9 @@ public class Thruster : MonoBehaviour
 	int rotateLeftIndex;
 	int rotateRightIndex;
 
-	float thrust;
-	float rotateLeft;
-	float rotateRight;
+	bool thrust;
+	bool rotateLeft;
+	bool rotateRight;
 
 	void Start()
 	{
@@ -29,13 +29,13 @@ public class Thruster : MonoBehaviour
 		int index = (int)parameters[0];
 
 		if (thrustIndex == index)
-			thrust = (float)parameters[1];
+			thrust = (bool)parameters[1];
 
 		if (rotateLeftIndex == index)
-			rotateLeft = (float)parameters[1];
+			rotateLeft = (bool)parameters[1];
 
 		if (rotateRightIndex == index)
-			rotateRight = (float)parameters[1];
+			rotateRight = (bool)parameters[1];
 	}
 
 	void Update()
@@ -43,18 +43,18 @@ public class Thruster : MonoBehaviour
 		var child = transform.GetChild (0);
 
 		// Rotate
-		if (rotateLeft > 0)
-			child.Rotate (Vector3.forward, -rotateLeft);
+		if (rotateLeft)
+			child.Rotate (Vector3.forward, -1f);
 
-		if (rotateRight > 0)
-			child.Rotate (Vector3.forward, rotateRight);
+		if (rotateRight)
+			child.Rotate (Vector3.forward, 1f);
 
 		// Thrust
 		var animator = GetComponentInChildren<Animator> ();
 		if (animator)
 			animator.SetFloat ("power", 0);
 
-		if (thrust > 0)
+		if (thrust)
 		{
 			if (animator)
 				animator.SetFloat ("power", 1);
