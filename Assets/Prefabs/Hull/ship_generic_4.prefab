@@ -10,7 +10,8 @@ GameObject:
   - 4: {fileID: 493632}
   - 61: {fileID: 6193632}
   - 50: {fileID: 5093632}
-  m_Layer: 0
+  - 114: {fileID: 11446842}
+  m_Layer: 10
   m_Name: ship_generic_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 493634}
   - 212: {fileID: 21293632}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ship_generic_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +66,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193632}
   m_Mass: 1
-  m_LinearDrag: 50
+  m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 0
@@ -84,6 +85,17 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
+--- !u!114 &11446842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e829e5fada522f64eb6f8ea3220242db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21293632
 SpriteRenderer:
   m_ObjectHideFlags: 1

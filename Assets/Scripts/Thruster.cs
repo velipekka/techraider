@@ -14,9 +14,10 @@ public class Thruster : MonoBehaviour
 
 	void Start()
 	{
-		thrustIndex = RaiderInput.GetRandomIndex ();
-		rotateLeftIndex = RaiderInput.GetRandomIndex ();
-		rotateRightIndex = RaiderInput.GetRandomIndex ();
+		var indexes = RaiderInput.GetRandomIndexes ();
+		thrustIndex = indexes[3];
+		rotateLeftIndex = indexes[4];
+		rotateRightIndex = indexes[5];
 
 		EventManager.Initialize (this);
 	}
@@ -42,10 +43,10 @@ public class Thruster : MonoBehaviour
 
 		// Rotate
 		if (rotateLeft)
-			child.Rotate (Vector3.forward, -1f);
+			child.Rotate (Vector3.forward, -3f);
 
 		if (rotateRight)
-			child.Rotate (Vector3.forward, 1f);
+			child.Rotate (Vector3.forward, 3f);
 
 		// Thrust
 		var animator = GetComponentInChildren<Animator> ();
@@ -57,7 +58,7 @@ public class Thruster : MonoBehaviour
 			if (animator)
 				animator.SetFloat ("power", 1);
 
-			rigidbody2D.AddForce(child.right*20);
+			rigidbody2D.AddForce(child.right*10);
 		}
 	}
 }

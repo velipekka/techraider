@@ -14,11 +14,14 @@ public class Laser : MonoBehaviour
 
 	bool isCharging;
 
+	public ParticleSystem laserParticle;
+
 	void Start()
 	{
-		shootIndex = RaiderInput.GetRandomIndex();
-		rotateLeftIndex = RaiderInput.GetRandomIndex ();
-		rotateRightIndex = RaiderInput.GetRandomIndex ();
+		var indexes = RaiderInput.GetRandomIndexes();
+		shootIndex = indexes[3];
+		rotateLeftIndex = indexes[4];
+		rotateRightIndex = indexes[5];
 
 		EventManager.Initialize (this);
 	}
@@ -27,6 +30,8 @@ public class Laser : MonoBehaviour
 	public void InputChanged(object[] parameters)
 	{
 		int index = (int)parameters[0];
+
+		Debug.Log(index);
 
 		if (shootIndex == index)
 			shoot = (bool)parameters[1];
@@ -40,6 +45,9 @@ public class Laser : MonoBehaviour
 
 	IEnumerator CoChargeLaser()
 	{
+		if (isCharging)
+			yield break;
+
 		var animator = GetComponentInChildren<Animator> ();
 		float charge = 0;
 
@@ -69,14 +77,17 @@ public class Laser : MonoBehaviour
 		if (rotateRight)
 			child.Rotate (Vector3.forward, 1);
 
-		// Thrust
+		// Charge
+		if (shoot)
+		{
+			StartCoroutine(CoChargeLaser());
+		}
+
+		// Shoot
 		if (isCharging && !shoot)
 		{
 			isCharging = false;
-
-			var animator = GetComponentInChildren<Animator> ();
-			if (animator)
-				animator.SetTrigger("use");
+			laserParticle.Emit(1);
 		}
 	}
 }

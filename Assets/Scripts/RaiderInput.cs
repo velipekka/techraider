@@ -9,19 +9,21 @@ using XInputDotNetPure;
 
 public class RaiderInput : MonoBehaviour
 {
-	static int sInputIndex = -1;
-	static int[] sShuffledIndexes;
+	public static int sInputPlayerIndex = 0;
 
-	public static int GetRandomIndex()
+	public static int[] GetRandomIndexes()
 	{
-		if (sShuffledIndexes == null)
-		{
-			sShuffledIndexes = new[] {0, 1, 2 };
-			ShipGenerator.Shuffle (sShuffledIndexes);
-		}
-		sInputIndex++;
-		return sShuffledIndexes[Mathf.Clamp(sInputIndex, 0, sShuffledIndexes.Length - 1)];
+		
+		var shuffle = new int[10];
+		int index = 0;
+		for (int i = sInputPlayerIndex * 10; i < sInputPlayerIndex * 10 + 10; i++)
+			shuffle[index++] = i;
+
+		//ShipGenerator.Shuffle (shuffle);
+		sInputPlayerIndex++;
+		return shuffle;
 	}
+
 
 	public const int k_ControllerCount = 4;
 	public const int k_KeysPerController = 10;
@@ -113,9 +115,9 @@ public class RaiderInput : MonoBehaviour
 			case 3:
 				return current.Buttons.Y == ButtonState.Pressed;
 			case 4:
-				return current.ThumbSticks.Left.X * k_WheelMultiplier > k_WheelEpsilon;
+				return current.ThumbSticks.Left.Y * k_WheelMultiplier > k_WheelEpsilon;
 			case 5:
-				return current.ThumbSticks.Left.X * k_WheelMultiplier < -k_WheelEpsilon;
+				return current.ThumbSticks.Left.Y * k_WheelMultiplier < -k_WheelEpsilon;
 			case 6:
 				return (prev.ThumbSticks.Right.X - current.ThumbSticks.Right.X) > k_KnobEpsilon && Mathf.Abs(prev.ThumbSticks.Right.X - current.ThumbSticks.Right.X) < 0.5f;
 			case 7:
