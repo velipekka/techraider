@@ -7,8 +7,12 @@ public class CameraController : MonoBehaviour
 
     Vector2 vel;
 	void Update()
-    {
-        Vector2 target = followTarget.position;
+	{
+		Vector3 target = Vector2.zero;
+		foreach (Transform child in followTarget)
+			target += child.position;
+
+        target /= followTarget.childCount;
 
         Vector2 pos = Vector2.SmoothDamp(transform.position, target, ref vel, .2f);
         transform.position = new Vector3(pos.x, pos.y, transform.position.z);
