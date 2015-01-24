@@ -55,6 +55,8 @@ public class ShipGenerator : MonoBehaviour
 				continue;
 
 			SpringJoint2D joint;
+			// because it said it was not assigned :(
+			joint = null;
 
 			slot.left =		 GetSlotFromMap (slot.position + new Vector2 (-1, 0));
 			slot.right =	 GetSlotFromMap (slot.position + new Vector2 (1, 0));

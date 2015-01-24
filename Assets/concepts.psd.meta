@@ -1,0 +1,366 @@
+fileFormatVersion: 2
+guid: 513b646dff2f6423f92025ffc3e03e2b
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: jackson_eyeleft
+    21300002: jackson_eyeright
+    21300004: donutsus_face
+    21300006: donutsus_mouth
+    21300008: owen_hat
+    21300010: owen_mitt
+    21300012: leggy_stalkhigh
+    21300014: jackson_mouth
+    21300016: donutsus_scarfend
+    21300018: leggy_stalklow
+    21300020: jackson_body
+    21300022: donutsus_scarf
+    21300024: owen_face
+    21300026: owen_stalk
+    21300028: leggy_body
+    21300030: donutsus_snout
+    21300032: leggy_leftleg
+    21300034: leggy_rightleg
+    21300036: jackson_finger
+    21300038: jackson_upperhand
+    21300040: donutsus_body
+    21300042: owen_choker
+    21300044: jackson_hand
+    21300046: owen_body
+    21300048: leggy_lefthand
+    21300050: leggy_face
+    21300052: leggy_righthand
+    21300054: jackson_lowerhand
+    21300056: jackson_fist
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: jackson_eyeleft
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 467
+        width: 21
+        height: 29
+      alignment: 9
+      pivot: {x: .722920358, y: .100280762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jackson_eyeright
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 466
+        width: 19
+        height: 35
+      alignment: 9
+      pivot: {x: .441337198, y: .0860055089}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: donutsus_face
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 411
+        width: 52
+        height: 89
+      alignment: 9
+      pivot: {x: .594312549, y: .269565552}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: donutsus_mouth
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 494
+        width: 14
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: owen_hat
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 477
+        width: 42
+        height: 20
+      alignment: 9
+      pivot: {x: .622442365, y: .153434753}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: owen_mitt
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 449
+        width: 33
+        height: 47
+      alignment: 9
+      pivot: {x: .682391524, y: .0778704733}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: leggy_stalkhigh
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 469
+        width: 15
+        height: 26
+      alignment: 9
+      pivot: {x: .722922742, y: .0798774138}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jackson_mouth
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 475
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: donutsus_scarfend
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 462
+        width: 36
+        height: 18
+      alignment: 9
+      pivot: {x: .903706014, y: .53726536}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: leggy_stalklow
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 470
+        width: 7
+        height: 23
+      alignment: 9
+      pivot: {x: .468152732, y: .141386613}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jackson_body
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 373
+        width: 88
+        height: 81
+      alignment: 9
+      pivot: {x: .881326437, y: .704703629}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: donutsus_scarf
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 438
+        width: 29
+        height: 16
+      alignment: 9
+      pivot: {x: .831531405, y: .486026764}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: owen_face
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 373
+        width: 50
+        height: 88
+      alignment: 9
+      pivot: {x: .508943498, y: .0553588867}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: owen_stalk
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 415
+        width: 8
+        height: 28
+      alignment: 9
+      pivot: {x: .5, y: .125809804}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: leggy_body
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 431
+        width: 73
+        height: 23
+      alignment: 9
+      pivot: {x: .481677741, y: .238309115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: donutsus_snout
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 399
+        width: 22
+        height: 26
+      alignment: 9
+      pivot: {x: .216283619, y: .842954218}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: leggy_leftleg
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 330
+        width: 34
+        height: 84
+      alignment: 9
+      pivot: {x: .840940595, y: .9378829}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: leggy_rightleg
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 328
+        width: 32
+        height: 85
+      alignment: 9
+      pivot: {x: .256178856, y: .935354054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jackson_finger
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 331
+        width: 8
+        height: 23
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jackson_upperhand
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 278
+        width: 27
+        height: 71
+      alignment: 9
+      pivot: {x: .470757097, y: .106825277}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: donutsus_body
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 266
+        width: 144
+        height: 123
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: owen_choker
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 345
+        width: 46
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jackson_hand
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 283
+        width: 46
+        height: 39
+      alignment: 9
+      pivot: {x: .848918736, y: .145614237}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: owen_body
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 280
+        width: 97
+        height: 49
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: leggy_lefthand
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 275
+        width: 7
+        height: 18
+      alignment: 9
+      pivot: {x: .800000846, y: .927778482}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: leggy_face
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 271
+        width: 65
+        height: 39
+      alignment: 9
+      pivot: {x: .431408703, y: .0770193264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: leggy_righthand
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 273
+        width: 9
+        height: 27
+      alignment: 9
+      pivot: {x: .20000203, y: .940741658}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jackson_lowerhand
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 218
+        width: 19
+        height: 45
+      alignment: 9
+      pivot: {x: .570396006, y: .871533871}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jackson_fist
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 176
+        width: 17
+        height: 27
+      alignment: 9
+      pivot: {x: .631129563, y: .821995497}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
