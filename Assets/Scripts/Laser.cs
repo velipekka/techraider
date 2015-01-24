@@ -8,9 +8,9 @@ public class Laser : MonoBehaviour
 	int rotateLeftIndex;
 	int rotateRightIndex;
 
-	float shoot = 1;
-	float rotateLeft;
-	float rotateRight;
+	bool shoot;
+	bool rotateLeft;
+	bool rotateRight;
 
 	bool isCharging;
 
@@ -29,13 +29,13 @@ public class Laser : MonoBehaviour
 		int index = (int)parameters[0];
 
 		if (shootIndex == index)
-			shoot = (float)parameters[1];
+			shoot = (bool)parameters[1];
 
 		if (rotateLeftIndex == index)
-			rotateLeft = (float)parameters[1];
+			rotateLeft = (bool)parameters[1];
 
 		if (rotateRightIndex == index)
-			rotateRight = (float)parameters[1];
+			rotateRight = (bool)parameters[1];
 	}
 
 	IEnumerator CoChargeLaser()
@@ -43,7 +43,7 @@ public class Laser : MonoBehaviour
 		var animator = GetComponentInChildren<Animator> ();
 		float charge = 0;
 
-		while (shoot > 0)
+		while (shoot)
 		{
 			isCharging = true;
 
@@ -63,14 +63,14 @@ public class Laser : MonoBehaviour
 		var child = transform.GetChild (0);
 
 		// Rotate
-		if (rotateLeft > 0)
-			child.Rotate (Vector3.forward, -rotateLeft);
+		if (rotateLeft)
+			child.Rotate (Vector3.forward, -1);
 
-		if (rotateRight > 0)
-			child.Rotate (Vector3.forward, rotateRight);
+		if (rotateRight)
+			child.Rotate (Vector3.forward, 1);
 
 		// Thrust
-		if (isCharging && shoot <= 0)
+		if (isCharging && !shoot)
 		{
 			isCharging = false;
 
