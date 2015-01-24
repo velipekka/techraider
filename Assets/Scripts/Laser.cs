@@ -18,9 +18,10 @@ public class Laser : MonoBehaviour
 
 	void Start()
 	{
-		shootIndex = RaiderInput.GetRandomIndex();
-		rotateLeftIndex = RaiderInput.GetRandomIndex ();
-		rotateRightIndex = RaiderInput.GetRandomIndex ();
+		var indexes = RaiderInput.GetRandomIndexes();
+		shootIndex = indexes[3];
+		rotateLeftIndex = indexes[4];
+		rotateRightIndex = indexes[5];
 
 		EventManager.Initialize (this);
 	}
