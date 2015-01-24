@@ -5,45 +5,56 @@ using System.Collections;
 public class Thruster : MonoBehaviour
 {
 	static int sInputIndex = 0;
-	int thrustInput;
-	int rotateInput;
+
+	int thrustIndex;
+	int rotateLeftIndex;
+	int rotateRightIndex;
+
+	float thrust;
+	float rotateLeft;
+	float rotateRight;
 
 	void Start()
 	{
-		thrustInput = sInputIndex++;
+		thrustIndex = sInputIndex++;
+		rotateLeftIndex = sInputIndex++;
+		rotateRightIndex = sInputIndex++;
 
 		EventManager.Initialize (this);
 	}
-
-	float inputValue;
 
 	[Listen ("InputChanged")]
 	public void InputChanged(object[] parameters)
 	{
 		int index = (int)parameters[0];
 
-		if (thrustInput == index)
-		{
-			inputValue = (float)parameters[1];
+		if (thrustIndex == index)
+			thrust = (float)parameters[1];
 
-			var animator = GetComponentInChildren<Animator> ();
-			if (animator)
-				animator.SetFloat ("power", inputValue);
-		}
+		if (rotateLeftIndex == index)
+			rotateLeft = (float)parameters[1];
+
+		if (rotateRightIndex == index)
+			rotateRight = (float)parameters[1];
 	}
 
 	void Update()
 	{
 		var child = transform.GetChild (0);
 
-		child.Rotate (Vector3.forward, Input.GetAxis ("Horizontal"));
+		// Rotate
+		if (rotateLeft > 0)
+			child.Rotate (Vector3.forward, -rotateLeft);
 
+		if (rotateRight > 0)
+			child.Rotate (Vector3.forward, rotateRight);
+
+		// Thrust
 		var animator = GetComponentInChildren<Animator> ();
 		if (animator)
 			animator.SetFloat ("power", 0);
 
-		//if (inputValue > 0)
-		if (Input.GetKey(KeyCode.Space))
+		if (thrust > 0)
 		{
 			if (animator)
 				animator.SetFloat ("power", 1);
