@@ -91,7 +91,7 @@ public class ShipGenerator : MonoBehaviour
 
 		var joint = from.gameObject.AddComponent<SpringJoint2D> ();
 		joint.distance = 0;
-		joint.frequency = 1f;
+		joint.frequency = from.item ? 10f : 1.5f;
 		joint.collideConnected = true;
 		joint.anchor = anchor;
 		joint.connectedAnchor = -anchor;
@@ -108,6 +108,7 @@ public class ShipGenerator : MonoBehaviour
 
 			slot.gameObject = Instantiate (prefab, slot.position, prefab.transform.rotation) as GameObject;
 			slot.gameObject.transform.parent = transform;
+            
 		}
 	}
 
