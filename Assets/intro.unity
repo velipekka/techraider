@@ -1601,6 +1601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Speed: 0
+  m_TargetVolume: 0
 --- !u!1 &1321980027
 GameObject:
   m_ObjectHideFlags: 0
