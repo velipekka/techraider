@@ -31,6 +31,8 @@ internal static class HealthContainer
 public class LaserBeam : MonoBehaviour
 {
 	public float speed;
+	public GameObject explosionPrefab;
+	public AudioClip[] explosionSFX;
 
 	IEnumerator Start ()
 	{
@@ -49,7 +51,10 @@ public class LaserBeam : MonoBehaviour
 
 		if (HealthContainer.IsDestroyed (hit.gameObject))
 			Destroy(hit.gameObject);
-
+		
+		var explosion = Instantiate (explosionPrefab, transform.position, Quaternion.identity) as GameObject;
+		explosion.audio.PlayOneShot (explosionSFX[Random.Range (0, explosionSFX.Length)]);		
+		Destroy (explosion, 1);
 		Destroy(gameObject);
 	}
 }

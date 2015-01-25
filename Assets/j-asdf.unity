@@ -596,8 +596,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: 10
-  minTime: 8
-  maxTime: 10
+  minTime: 6
+  maxTime: 8
   meteorPrefab: {fileID: 105622, guid: 1762b97a29a110749b535c9ff745dde3, type: 2}
   radius: 8
 --- !u!1 &604078060
@@ -816,6 +816,31 @@ MonoBehaviour:
       tangentMode: 0
     - time: 8.01519108
       value: 3.99577785
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 16.2058125
+      value: 3.9998064
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 21.5108528
+      value: 5.16025162
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 34.9472198
+      value: 5.16025162
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 45.9635696
+      value: 6.26763391
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 589.788147
+      value: 14.2696123
       inSlope: 0
       outSlope: 0
       tangentMode: 0

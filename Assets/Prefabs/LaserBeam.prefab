@@ -68,6 +68,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 25
+  explosionPrefab: {fileID: 198942, guid: 9367516bf94e61a488e4ff57d6bcb637, type: 2}
+  explosionSFX:
+  - {fileID: 8300000, guid: c625edabdc343ea499d331cc8a713b72, type: 3}
+  - {fileID: 8300000, guid: ec4ab2cadfcf98545b235e419712fa88, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

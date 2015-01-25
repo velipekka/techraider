@@ -59,6 +59,11 @@ public class Thruster : MonoBehaviour
 				animator.SetFloat ("power", 1);
 
 			rigidbody2D.AddForce(child.right*20);
+
+			if (!audio.isPlaying)
+				audio.Play();
 		}
+		else
+			audio.Stop();
 	}
 }
