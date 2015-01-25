@@ -39,7 +39,7 @@ namespace RageEvent
 
 			MethodInfo[] methods = target.GetType().GetMethods();
 			foreach (MethodInfo methodInfo in methods)
-				if (methodInfo.GetCustomAttributes (typeof (Listen), true).Length > 0)
+				if (methodInfo.GetCustomAttributes(typeof (Listen), true).Length > 0)
 					Listen (target, methodInfo.Name);
 		}
 

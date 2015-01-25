@@ -38,9 +38,13 @@ public class RaiderInput : MonoBehaviour
 	public bool[] prevValues;
 
 	// Use this for initialization
-	void Start ()
+	void Awake()
 	{
 		EventManager.Initialize();
+	}
+	
+	void Start ()
+	{
 		currentState = new GamePadState[4];
 		prevState = new GamePadState[4];
 		prevValues = new bool[k_ControllerCount * k_KeysPerController];
@@ -60,20 +64,20 @@ public class RaiderInput : MonoBehaviour
 
 	void OnGUI()
 	{
-		string s = "";
-		for (int c = 0; c < k_ControllerCount; c++)
-		{
-			for (int k = 0; k < k_KeysPerController; k++)
-			{
-				s += GetValue(c, k) ? "1" : "0";
-			}
-		}
-		GUILayout.Label(s);
+		//string s = "";
+		//for (int c = 0; c < k_ControllerCount; c++)
+		//{
+		//	for (int k = 0; k < k_KeysPerController; k++)
+		//	{
+		//		s += GetValue(c, k) ? "1" : "0";
+		//	}
+		//}
+		//GUILayout.Label(s);
 
-		for (int i = 0; i < 4; i++)
-		{
-			GUILayout.Label(i + ": " + currentState[i].ThumbSticks.Right.X.ToString());
-		}
+		//for (int i = 0; i < 4; i++)
+		//{
+		//	GUILayout.Label(i + ": " + currentState[i].ThumbSticks.Right.X.ToString());
+		//}
 	}
 
 	private void GameInputHandling()

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class starfield : MonoBehaviour {
@@ -44,7 +44,7 @@ public class starfield : MonoBehaviour {
 
         for (int i = 0; i < stars.Length; i++)
         {
-            stars[i].position += (Vector3)(delta * (1f - Mathf.InverseLerp(sizeMin, sizeMax, stars[i].size)));
+            stars[i].position -= (Vector3)(delta * (1f - Mathf.InverseLerp(sizeMin, sizeMax, stars[i].size)));
         }
 
         GetComponent<ParticleSystem>().SetParticles(stars, starCount);
