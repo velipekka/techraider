@@ -38,9 +38,13 @@ public class RaiderInput : MonoBehaviour
 	public bool[] prevValues;
 
 	// Use this for initialization
-	void Start ()
+	void Awake()
 	{
 		EventManager.Initialize();
+	}
+	
+	void Start ()
+	{
 		currentState = new GamePadState[4];
 		prevState = new GamePadState[4];
 		prevValues = new bool[k_ControllerCount * k_KeysPerController];
