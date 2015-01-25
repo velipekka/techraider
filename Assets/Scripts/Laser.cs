@@ -17,6 +17,7 @@ public class Laser : MonoBehaviour
 	public ParticleSystem laserParticle;
 	public GameObject laserBeamPrefab;
 	public float laserForce;
+	public AudioClip[] laserSFX;
 
 	void Start()
 	{
@@ -92,6 +93,8 @@ public class Laser : MonoBehaviour
 			Instantiate (laserBeamPrefab, transform.GetChild (0).position, transform.GetChild (0).rotation);
 			laserParticle.Emit(1);
 			rigidbody2D.AddForce (transform.GetChild(0).right * 5);
+
+			audio.PlayOneShot (laserSFX[Random.Range (0, laserSFX.Length)]);
 		}
 	}
 }

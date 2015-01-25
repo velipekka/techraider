@@ -1,4 +1,4 @@
-﻿using RageEvent;
+using RageEvent;
 using UnityEngine;
 using System.Collections;
 
@@ -7,6 +7,7 @@ public class CameraController : MonoBehaviour
 	public Transform followTarget;
 
 	public AnimationCurve speedCurve;
+	public bool m_GameOver = false;
 
     Vector2 vel;
 	float time;
@@ -27,8 +28,11 @@ public class CameraController : MonoBehaviour
 		float padding = 0.1f;
 		Rect viewRect = new Rect(-padding, -padding, 1 + padding, 1 + padding);
 		Vector2 viewPosition = camera.WorldToViewportPoint(target);
-		if (!viewRect.Contains(viewPosition))
+		if (!viewRect.Contains(viewPosition) && !m_GameOver)
+		{
+			m_GameOver = true;
 			EventManager.Trigger("GameOver");
+		}
 	}
 
 }

@@ -40,6 +40,7 @@ public class RaiderInput : MonoBehaviour
 	// Use this for initialization
 	void Awake()
 	{
+		sInputPlayerIndex = 0;
 		EventManager.Initialize();
 	}
 	
