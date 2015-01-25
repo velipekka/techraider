@@ -60,20 +60,20 @@ public class RaiderInput : MonoBehaviour
 
 	void OnGUI()
 	{
-		string s = "";
-		for (int c = 0; c < k_ControllerCount; c++)
-		{
-			for (int k = 0; k < k_KeysPerController; k++)
-			{
-				s += GetValue(c, k) ? "1" : "0";
-			}
-		}
-		GUILayout.Label(s);
+		//string s = "";
+		//for (int c = 0; c < k_ControllerCount; c++)
+		//{
+		//	for (int k = 0; k < k_KeysPerController; k++)
+		//	{
+		//		s += GetValue(c, k) ? "1" : "0";
+		//	}
+		//}
+		//GUILayout.Label(s);
 
-		for (int i = 0; i < 4; i++)
-		{
-			GUILayout.Label(i + ": " + currentState[i].ThumbSticks.Right.X.ToString());
-		}
+		//for (int i = 0; i < 4; i++)
+		//{
+		//	GUILayout.Label(i + ": " + currentState[i].ThumbSticks.Right.X.ToString());
+		//}
 	}
 
 	private void GameInputHandling()
