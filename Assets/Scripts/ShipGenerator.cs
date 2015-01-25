@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Principal;
+using RageEvent;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -46,6 +47,19 @@ public class ShipGenerator : MonoBehaviour
 		GenerateParts();
 
 		ConnectParts();
+	}
+
+	Vector2 previousVelocity;
+	void Update()
+	{
+		Vector2 velocity = slots[0].gameObject.rigidbody2D.velocity;
+		float magnitudeDelta = Mathf.Abs(velocity.magnitude - previousVelocity.magnitude);
+		float angle = Math.Abs(Vector2.Angle(velocity, previousVelocity));
+
+		if (magnitudeDelta > 5 * Time.deltaTime)//|| angle > 720 * Time.deltaTime)
+			EventManager.Trigger("ShipHit");
+
+		previousVelocity = velocity;
 	}
 
 	void ConnectParts()

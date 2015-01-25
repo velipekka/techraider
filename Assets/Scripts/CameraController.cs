@@ -26,7 +26,7 @@ public class CameraController : MonoBehaviour
 		transform.Translate (Vector3.right * speed * Time.deltaTime);
 
 		float padding = 0.1f;
-		Rect viewRect = new Rect(-padding, -padding, 1 + padding, 1 + padding);
+		Rect viewRect = new Rect(-padding, -padding, 1 + padding * 2, 1 + padding * 2);
 		Vector2 viewPosition = camera.WorldToViewportPoint(target);
 		if (!viewRect.Contains(viewPosition) && !m_GameOver)
 		{

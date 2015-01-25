@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using RageEvent;
+using UnityEngine;
 using System.Collections;
 
 internal static class HealthContainer
@@ -55,6 +56,9 @@ public class LaserBeam : MonoBehaviour
 		var explosion = Instantiate (explosionPrefab, transform.position, Quaternion.identity) as GameObject;
 		explosion.audio.PlayOneShot (explosionSFX[Random.Range (0, explosionSFX.Length)]);		
 		Destroy (explosion, 1);
+
+		EventManager.Trigger ("ShipHit");
+
 		Destroy(gameObject);
 	}
 }

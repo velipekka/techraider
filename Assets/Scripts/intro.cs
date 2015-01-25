@@ -12,7 +12,7 @@ public class intro : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		IntroAnimationFromWheel(4, true);
+		//IntroAnimationFromWheel(4, true);
 	}
 
 	[Listen("InputChanged")]

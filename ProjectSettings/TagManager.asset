@@ -54,3 +54,7 @@ TagManager:
     userID: 2
     uniqueID: 655114445
     locked: 0
+  - name: Band
+    userID: 4
+    uniqueID: 3497629359
+    locked: 0
